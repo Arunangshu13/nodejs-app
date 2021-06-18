@@ -1,0 +1,17 @@
+<%- include ("include/_header") %>
+    <div class="container form-co">
+        <h2 style="align-self: flex-start;">Create new user</h2>
+        <a class="link" href="/" >Go Back</a>
+        <form action="/Users" class="form-section" method="POST">
+            <span class="inp-grp">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" required class="inp-sec">
+            </span>
+            <span class="inp-grp">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required class="inp-sec">
+            </span>
+            <input class="btn"type="submit" value="Create User">
+        </form>
+    </div>
+<%- include ("include/_footer") %>

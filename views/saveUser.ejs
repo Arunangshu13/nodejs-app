@@ -1,0 +1,45 @@
+<%- include ("include/_header") %>
+    <div class="container form-co">
+        <h2 style="align-self: flex-start;">Update user information</h2>
+        <a class="link" href="/" >Go Back</a>
+        <form id="frm"  class="form-section" >
+            <input type="hidden" name="id" id="id" value="<%=user._id %>">
+            <span class="inp-grp">
+                <label for="name">Name</label>
+                <input type="text" name="uname" id="name" value="<%=user.uname %>"required class="inp-sec">
+            </span>
+            <span class="inp-grp">
+                <label for="email">Email</label>
+                <input type="email" name="uemail" id="email"value="<%=user.uemail %>" required class="inp-sec">
+            </span>
+            <input class="btn"type="submit" value="Save">
+        </form>
+    </div>
+    
+    <script>
+
+        document.getElementById("frm").addEventListener("submit", function(e){
+            e.preventDefault();
+        });
+
+        $("#frm").submit(function (event){
+            var data=$(this).serializeArray();
+            var finaldata={};
+            $.map(data,function(n, i){
+                finaldata[n['name']]=n['value'];
+            });
+            console.log(finaldata);
+            var request={
+                "url":`http://localhost:8000/Users/${finaldata.id}`,
+                "method":"PUT",
+                "data":finaldata
+            }
+
+            $.ajax(request).done( function(response){
+                alert(response.message);
+                window.location.href="/";
+            });
+        });
+
+    </script>
+<%- include ("include/_footer") %>

@@ -1,0 +1,136 @@
+*{
+    padding:0;
+    margin:0;
+    font-family: sans-serif;
+}
+.heading{
+    position: fixed;
+    display:flex;
+    padding: 10px;
+    width:100%;
+    z-index: 1;
+    background-color: whitesmoke;
+    /* margin:2% 0%; */
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 0px 1px grey;
+}
+.container{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10% 5% 5% 5%;
+}
+.form-co{
+    align-items: stretch;
+    padding: 10%;
+    /* margin: 2%;    */
+}
+.add-btn{
+    background: grey;
+    text-decoration: none;
+    color: white;
+    width: 20%;
+    text-align: center;
+    padding:10px;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    font-weight: 700;
+    margin: 2%;
+}
+.add-btn:hover{
+    background: ghostwhite;
+    color:rgb(51, 51, 51);
+}
+.edit{
+    display: block;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 15px;
+    border: 1px solid lightgray;
+    text-decoration: none;
+    color: white;
+    width: 70px;
+    text-align: center;
+    background-color:steelblue ;
+}
+.delete{
+    display: block;
+    padding:5px;
+    font-size: 15px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    width: 70px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    background-color: #dc3545;
+}
+.edit:hover, .delete:hover{
+    opacity: 0.89;
+}
+
+table{
+    border-collapse: collapse;
+}
+td{
+    border: 1px solid lightgray;
+    padding: 5px;
+}
+th{
+    padding: 10px;
+    color: white;
+    border-radius: 10px 10px 0px 0px;
+    background-color: rgb(51, 51, 51);
+}
+
+.form-section{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    border: 1px solid rgb(51, 51, 51);
+    border-radius: 10px;
+    padding: 5%;
+    box-shadow: 0px 0px 1px 0px black;
+}
+.inp-grp{
+    display: flex;
+    flex-direction: column;
+    margin: 2% 0%;
+}
+.inp-sec{
+    padding: 10px;
+    outline: none;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
+.btn{
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding: 10px;
+    align-self: flex-end;
+    margin: 2%;
+    cursor:pointer;
+}
+.btn:hover{
+    background-color: rgb(51, 51, 51);
+    color:white;
+}
+
+.link{
+    display: block;
+    background-color: whitesmoke;
+    text-decoration: none;
+    width:10%;
+    color:steelblue;
+    margin: 2%;
+    border-radius: 5px;
+    border: none;
+    text-align: center;
+    padding:10px;
+    font-weight:700;
+    opacity: 0.89;
+}
+.back:hover{
+    opacity: 1;
+}
